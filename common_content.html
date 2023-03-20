@@ -3,13 +3,13 @@
   </div>
 
   <div class="title">
-	<h2 class="title__item">
+	<h2 class="title__item" id="title__item">
 	  Запрос заблокирован системой защиты
 	</h2>
   </div>
 
   <div class="text">
-	<div class="text__about">
+	<div class="text__about" id="text__about">
 	  С Вашего IP-адреса обнаружена подозрительная активность
 	</div>
 
@@ -17,24 +17,11 @@
     Ваш IP-адрес: <span id='ip_address'>не удалось определить</span><br>
     Текущее время: <span id='time'>не удалось определить</span><br><br>
   </div>
-
-  <script>
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET",'https://api64.ipify.org?format=json',false);
-    xmlHttp.send();
-    document.getElementById('ip_address').innerHTML = JSON.parse(xmlHttp.responseText)['ip']
-
-    var d = new Date, dformat = [(d.getDate()).toString().padStart(2,0),(d.getMonth()+1).toString().padStart(2,0),
-             d.getFullYear()].join('.') +' ' + [(d.getHours()).toString().padStart(2,0),(d.getMinutes()).toString().padStart(2,0),
-             (d.getSeconds()).toString().padStart(2,0)].join(':')+' (GMT'+(d.getTimezoneOffset()/(-60)  > 0 ? '+' : '')+
-             d.getTimezoneOffset()/(-60)+')';
-    document.getElementById('time').innerHTML = dformat;
-  </script>
   
-	<div class="text_note">
+   <div class="text_note">
     <span>
       Для разблокировки доступа, пожалуйста, обратитесь в Службу поддержки - наши специалисты оперативно помогут вам.
     </span><br>
     <span><a href="tel:8-800-5555-200" class="phone">8 (800) 5555-200</a></span>
-  </div>
+    </div>
   </div>
