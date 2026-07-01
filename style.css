@@ -125,7 +125,7 @@
         line-height: 24px;
       }
 
-	  #url {
+	  .url {
 		overflow-wrap: break-word;
     	word-break: break-all;
 	  }
